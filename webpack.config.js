@@ -17,7 +17,7 @@ const templateFiles = fs.readdirSync(environment.paths.source)
     .filter((file) => path.extname(file).toLowerCase() === '.html');
 
 const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin({
-    inject: true,
+    inject: 'body',
     hash: false,
     filename: template,
     template: path.resolve(environment.paths.source, template)
@@ -25,11 +25,11 @@ const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin(
 
 module.exports = {
     entry: {
-        app: path.resolve(environment.paths.source, 'js', 'app.js'),
+        app: path.resolve(environment.paths.source, 'js', 'app.js')
     },
     output: {
         filename: 'js/[name].js',
-        path: environment.paths.output,
+        path: environment.paths.output
     },
     module: {
         rules: [
@@ -72,7 +72,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
+            filename: 'css/[name].css'
         }),
         new ImageMinimizerPlugin({
             test: /\.(jpe?g|png|gif|svg)$/i,
@@ -112,7 +112,7 @@ module.exports = {
                     },
                 },
             ],
-        }),
+        })
     ].concat(htmlPluginEntries),
     target: 'web',
 };
