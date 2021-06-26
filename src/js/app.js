@@ -4,8 +4,8 @@ import '../scss/app.scss';
 import { data } from "./data.js"
 
 const quiz = document.querySelector(".js-quiz")
-const questionSet = document.querySelector(".js-set-current")
-const questionSetAll = document.querySelector(".js-set-all")
+let questionSet = document.querySelector(".js-set-current")
+let questionSetAll = document.querySelector(".js-set-all")
 const setName = document.querySelector(".js-question")
 const resultTitle = document.querySelector('.js-set')
 
@@ -93,6 +93,12 @@ const restartQuiz = () => {
     result = 0
     resultArray = []
     currentAnswer = ``
+    resultTitle.innerHTML = `
+    Вопрос <span class="js-set-current"></span> из <span class="js-set-all"></span>
+    `
+    questionSet = document.querySelector(".js-set-current")
+    questionSetAll = document.querySelector(".js-set-all")
+    questionSetAll.innerHTML = data.questions.length
     pushAnswers()
 }
 
