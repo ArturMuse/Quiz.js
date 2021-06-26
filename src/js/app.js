@@ -23,7 +23,6 @@ const sum = (value) => {
         resultArray.push(value)
         current += 1
         currentAnswer = ``
-        console.log(resultArray)
         pushAnswers()
     }
 }
@@ -32,7 +31,6 @@ const back = () => {
     resultArray.pop()
     current = current - 1
     currentAnswer = ``
-    console.log(resultArray)
     pushAnswers()
 }
 

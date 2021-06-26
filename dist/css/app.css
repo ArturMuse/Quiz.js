@@ -57,8 +57,8 @@
   margin-right: 20px;
 }
 .quiz-box__btn:hover {
-  color: #ffffff !important;
-  background-color: #1e4b9c !important;
+  color: #ffffff;
+  background-color: #1e4b9c;
 }
 .quiz-back {
   font-size: 18px;
@@ -121,8 +121,18 @@
   .quiz {
     padding: 28px 20px;
   }
+  .quiz-box__btn:hover {
+    color: #363636;
+    background-color: #fff;
+  }
+  .quiz-back:hover {
+    color: #1f4b9d;
+  }
   .quiz-result-link {
     margin-bottom: 20px;
     margin-right: 0;
+  }
+  .quiz-result-btn:hover {
+    color: #1f4b9d;
   }
 }

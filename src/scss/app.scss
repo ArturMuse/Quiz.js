@@ -45,8 +45,8 @@
                 margin-right: 20px;
             }
             &:hover {
-                color: #ffffff !important;
-                background-color: #1e4b9c !important;
+                color: #ffffff;
+                background-color: #1e4b9c;
             }
         }
     }
@@ -107,10 +107,28 @@
 @media screen and (max-width: 610px) {
     .quiz {
         padding: 28px 20px;
+        &-box {
+            &__btn {
+                &:hover {
+                    color: #363636;
+                    background-color: #fff;
+                }
+            }
+        }
+        &-back {
+            &:hover {
+                color: rgb(31, 75, 157);
+            }
+        }
         &-result {
             &-link {
                 margin-bottom: 20px;
                 margin-right: 0;
+            }
+            &-btn {
+                &:hover {
+                    color: rgb(31, 75, 157);
+                }
             }
         }
     }
