@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+.quiz {
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+    }
+    background-color: #fafafa;
+    border-radius: 16px;
+    max-width: 900px;
+    margin: auto;
+    padding: 28px 80px;
+    &-set {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 14px;
+        color: #767676;
+    }
+    &-question {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 32px;
+        color: #363636;
+    }
+    &-box {
+        display: flex;
+        flex-direction: column;
+        &__btn {
+            font-size: 18px;
+            line-height: 21px;
+            text-align: left;
+            padding: 20px 16px;
+            color: #363636;
+            background-color: #fff;
+            appearance: none;
+            border-radius: 4px;
+            border: none;
+            margin-bottom: 10px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            &:hover {
+                color: #ffffff !important;
+                background-color: #1e4b9c !important;
+            }
+        }
+    }
+    &-back {
+        font-size: 18px;
+        margin-top: 28px;
+        display: inline-flex;
+        align-items: center;
+        color: rgb(31, 75, 157);
+        border: none;
+        background: none;
+        cursor: pointer;
+        span {
+            margin-right: 10px;
+        }
+        &:hover {
+            color: rgb(212, 20, 90);
+        }
+    }
+    &-result {
+        &-text {
+            font-size: 22px;
+            line-height: 26px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        &-btn {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21px;
+            color: rgb(31, 75, 157);
+            border: none;
+            background: none;
+            cursor: pointer;
+            &:hover {
+                color: rgb(212, 20, 90);
+            }
+        }
+        &-link {
+            border-radius: 4px;
+            display: inline-block;
+            height: 48px;
+            padding: 15px 12px;
+            min-width: 48px;
+            font-weight: 500;
+            align-items: center;
+            background-color: #1e4b9c;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 15px;
+            &:hover {
+                background-color: #0f2a71;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .quiz {
+        padding: 28px 20px;
+        &-result {
+            &-link {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+        }
+    }
+}
