@@ -52,9 +52,13 @@
   cursor: pointer;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .quiz-box__btn span {
   margin-right: 20px;
+  font-weight: 500;
 }
 .quiz-box__btn:hover {
   color: #ffffff;
